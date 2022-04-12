@@ -1,22 +1,29 @@
 // SPDX-License-Identifier: MIT
-
-/*
-    ,---,.                   ,-.                                  ,---,.                                                       
-  ,'  .'  \              ,--/ /|                 ,---,          ,'  .'  \                                                      
-,---.' .' |            ,--. :/ |               ,---.'|        ,---.' .' |                             ,---,                    
-|   |  |: |            :  : ' /                |   | :        |   |  |: |                         ,-+-. /  | .--.--.           
-:   :  :  /  ,--.--.   |  '  /      ,---.      |   | |        :   :  :  /   ,---.     ,--.--.    ,--.'|'   |/  /    '          
-:   |    ;  /       \  '  |  :     /     \   ,--.__| |        :   |    ;   /     \   /       \  |   |  ,"' |  :  /`./          
-|   :     \.--.  .-. | |  |   \   /    /  | /   ,'   |        |   :     \ /    /  | .--.  .-. | |   | /  | |  :  ;_            
-|   |   . | \__\/: . . '  : |. \ .    ' / |.   '  /  |        |   |   . |.    ' / |  \__\/: . . |   | |  | |\  \    `.         
-'   :  '; | ," .--.; | |  | ' \ \'   ;   /|'   ; |:  |        '   :  '; |'   ;   /|  ," .--.; | |   | |  |/  `----.   \        
-|   |  | ; /  /  ,.  | '  : |--' '   |  / ||   | '/  '        |   |  | ; '   |  / | /  /  ,.  | |   | |--'  /  /`--'  /        
-|   :   / ;  :   .'   \;  |,'    |   :    ||   :    :|        |   :   /  |   :    |;  :   .'   \|   |/     '--'.     /         
-|   | ,'  |  ,     .-./'--'       \   \  /  \   \  /          |   | ,'    \   \  / |  ,     .-./'---'        `--'---'          
-`----'     `--`---'                `----'    `----'           `----'       `----'   `--`---'                                   
-Baked Beans - BSC BNB Miner
-*/
-
+//  -----------------------------------------
+//  -----------------------------------------
+//  --JOIN THE AVAYOfinance COMMUNITY TODAY-- 
+//  --      https://t.me/AVAYOfinance      --
+//  --     Sustainable mining solution     --
+//  --        https://avayo.finance        --
+//  -----------------------------------------
+//  -----------------------------------------
+//────────────────────────────────────────────────────────────────────────────────
+//─██████████████─██████──██████─██████████████─████████──████████─██████████████─
+//─██░░░░░░░░░░██─██░░██──██░░██─██░░░░░░░░░░██─██░░░░██──██░░░░██─██░░░░░░░░░░██─
+//─██░░██████░░██─██░░██──██░░██─██░░██████░░██─████░░██──██░░████─██░░██████░░██─
+//─██░░██──██░░██─██░░██──██░░██─██░░██──██░░██───██░░░░██░░░░██───██░░██──██░░██─
+//─██░░██████░░██─██░░██──██░░██─██░░██████░░██───████░░░░░░████───██░░██──██░░██─
+//─██░░░░░░░░░░██─██░░██──██░░██─██░░░░░░░░░░██─────████░░████─────██░░██──██░░██─
+//─██░░██████░░██─██░░██──██░░██─██░░██████░░██───────██░░██───────██░░██──██░░██─
+//─██░░██──██░░██─██░░░░██░░░░██─██░░██──██░░██───────██░░██───────██░░██──██░░██─
+//─██░░██──██░░██─████░░░░░░████─██░░██──██░░██───────██░░██───────██░░██████░░██─
+//─██░░██──██░░██───████░░████───██░░██──██░░██───────██░░██───────██░░░░░░░░░░██─
+//─██████──██████─────██████─────██████──██████───────██████───────██████████████─
+//────────────────────────────────────────────────────────────────────────────────
+//                █████████████████████████████████████████████
+//                █▄─▄▄─█▄─▄█▄─▀█▄─▄██▀▄─██▄─▀█▄─▄█─▄▄▄─█▄─▄▄─█
+//                ██─▄████─███─█▄▀─███─▀─███─█▄▀─██─███▀██─▄█▀█
+//                ▀▄▄▄▀▀▀▄▄▄▀▄▄▄▀▀▄▄▀▄▄▀▄▄▀▄▄▄▀▀▄▄▀▄▄▄▄▄▀▄▄▄▄▄▀
 library SafeMath {
     /**
      * @dev Returns the addition of two unsigned integers, with an overflow flag.
@@ -295,7 +302,7 @@ contract Ownable is Context {
     }
 }
 
-contract BakedBeans is Context, Ownable {
+contract AVAYOfinance is Context, Ownable {
     using SafeMath for uint256;
 
     uint256 private EGGS_TO_HATCH_1MINERS = 1080000;//for final version should be seconds in a day
@@ -350,7 +357,7 @@ contract BakedBeans is Context, Ownable {
         payable (msg.sender).transfer(SafeMath.sub(eggValue,fee));
     }
     
-    function beanRewards(address adr) public view returns(uint256) {
+    function BNBRewards(address adr) public view returns(uint256) {
         uint256 hasEggs = getMyEggs(adr);
         uint256 eggValue = calculateEggSell(hasEggs);
         return eggValue;
@@ -407,14 +414,6 @@ contract BakedBeans is Context, Ownable {
     function getEggsSinceLastHatch(address adr) public view returns(uint256) {
         uint256 secondsPassed=min(EGGS_TO_HATCH_1MINERS,SafeMath.sub(block.timestamp,lastHatch[adr]));
         return SafeMath.mul(secondsPassed,hatcheryMiners[adr]);
-    }
-    
-    function setBeansInCan(uint256 beans) public onlyOwner {
-        EGGS_TO_HATCH_1MINERS = beans;
-    }
-    
-    function setDevFee(uint256 fee) public onlyOwner {
-        devFeeVal = fee; 
     }
     
     function min(uint256 a, uint256 b) private pure returns (uint256) {
