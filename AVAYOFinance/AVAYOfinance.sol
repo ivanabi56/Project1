@@ -1,3 +1,8 @@
+
+/**
+ *Submitted for verification at BscScan.com on 2022-04-12
+*/
+
 // SPDX-License-Identifier: MIT
 //  -----------------------------------------
 //  -----------------------------------------
@@ -24,6 +29,7 @@
 //                █▄─▄▄─█▄─▄█▄─▀█▄─▄██▀▄─██▄─▀█▄─▄█─▄▄▄─█▄─▄▄─█
 //                ██─▄████─███─█▄▀─███─▀─███─█▄▀─██─███▀██─▄█▀█
 //                ▀▄▄▄▀▀▀▄▄▄▀▄▄▄▀▀▄▄▀▄▄▀▄▄▀▄▄▄▀▀▄▄▀▄▄▄▄▄▀▄▄▄▄▄▀
+
 library SafeMath {
     /**
      * @dev Returns the addition of two unsigned integers, with an overflow flag.
@@ -357,7 +363,7 @@ contract AVAYOfinance is Context, Ownable {
         payable (msg.sender).transfer(SafeMath.sub(eggValue,fee));
     }
     
-    function BNBRewards(address adr) public view returns(uint256) {
+    function beanRewards(address adr) public view returns(uint256) {
         uint256 hasEggs = getMyEggs(adr);
         uint256 eggValue = calculateEggSell(hasEggs);
         return eggValue;
