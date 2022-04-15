@@ -17,7 +17,9 @@ const Wrapper = styled("div")(({ theme }) => ({
 export default function Header() {
   return (
     <Wrapper>
-      <img src={logo} alt="" width={"100%"} style={{ marginTop: -48 }} />
+      <a href="https://avayofinance.com" target="__blank">
+        <img src={logo} alt="" width={"100%"} style={{ marginTop: -48 }} />
+      </a>
       <Connect responsive={false} />
       <Typography style={{color: "#2CCBFF"}} variant="h6" marginTop={-3}>
       AVAYOFinance - Sustainable mining solution
