@@ -4,6 +4,7 @@ import { config } from "../../config";
 import esIcon from "../assets/ESIcon.png";
 import tgIcon from "../assets/TGIcon.png";
 import twIcon from "../assets/TWIcon.png";
+import DSIcon from "../assets/DSIcon.png";
 
 export default function Footer() {
   return (
@@ -21,6 +22,11 @@ export default function Footer() {
       <Grid item>
         <a href="https://twitter.com/AvayoFinance" target="__blank">
           <img src={twIcon} alt="" width={48} height={48} />
+        </a>
+      </Grid>
+      <Grid item>
+        <a href="https://discord.gg/hpQjHnFe9v" target="__blank">
+          <img src={DSIcon} alt="" width={48} height={40} />
         </a>
       </Grid>
     </Grid>
