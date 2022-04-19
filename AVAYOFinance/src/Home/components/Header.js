@@ -2,7 +2,7 @@ import Typography from "@mui/material/Typography";
 import { styled } from "@mui/system";
 import logo from "../../assets/FullLogo.png";
 import Connect from "./Connect";
-import index from "src/index.css";
+import index from "./index.css";
 import { Button } from "@mui/material";
 
 const Wrapper = styled("div")(({ theme }) => ({
