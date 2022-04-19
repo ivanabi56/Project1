@@ -2,6 +2,8 @@ import Typography from "@mui/material/Typography";
 import { styled } from "@mui/system";
 import logo from "../../assets/FullLogo.png";
 import Connect from "./Connect";
+import index from "src/index.css";
+import { Button } from "@mui/material";
 
 const Wrapper = styled("div")(({ theme }) => ({
   textAlign: "center",
@@ -10,6 +12,15 @@ const Wrapper = styled("div")(({ theme }) => ({
     h5: {
       fontSize: 20,
       margin: 0,
+    },
+  },
+}));
+const ButtonContainer = styled(Grid)(({ theme }) => ({
+  [theme.breakpoints.down("sm")]: {
+    flexDirection: "column",
+    "> div": {
+      marginLeft: 0,
+      marginRight: 0,
     },
   },
 }));
@@ -24,13 +35,34 @@ export default function Header() {
       <Typography style={{color: "#2CCBFF"}} variant="h6" marginTop={-3}>
       AVAYOFinance - Sustainable mining solution
       </Typography>
-      <a href="https://github.com/AvayoFinance/WHITEPAPER_V1" target="__blank">
-        <p class="hover-underline-animation" >Whitepaper</p>
-      </a>
-      
-      <a href="https://hazecrypto.net/audit/avayofinance" target="__blank">
-        <p1  class="hover-underline-animation"   >Audit</p1>
-      </a>
+      <ButtonContainer container>
+      <Grid item flexGrow={1} marginLeft={1} marginTop={3}>
+              <a href="https://github.com/AvayoFinance/WHITEPAPER_V1" target="__blank">
+              <Button
+                variant="contained"
+                color="secondary"
+                fullWidth
+                
+                
+              > 
+                WHITEPAPER
+              </Button>
+              </a>
+            </Grid>
+            <Grid item flexGrow={1} marginLeft={1} marginTop={3}>
+              <a href="https://hazecrypto.net/audit/avayofinance" target="__blank">
+              <Button
+                variant="contained"
+                color="secondary"
+                fullWidth
+                
+                
+              >
+                AUDIT 
+              </Button>
+              </a>
+            </Grid>
+            </ButtonContainer>
     </Wrapper>
   );
 }
