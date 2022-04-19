@@ -2,9 +2,9 @@ import Typography from "@mui/material/Typography";
 import { styled } from "@mui/system";
 import logo from "../../assets/FullLogo.png";
 
-import index from "Project1/AVAYOFinance/src/index.css";
+import index from "../../index";
 import { Button } from "@mui/material";
-import Connect from "Project1/AVAYOFinance/src/Home/components/Connect.js"; 
+import Connect from "./Connect"; 
 
 const Wrapper = styled("div")(({ theme }) => ({
   textAlign: "center",
