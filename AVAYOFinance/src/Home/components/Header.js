@@ -1,7 +1,7 @@
 import Typography from "@mui/material/Typography";
 import { styled } from "@mui/system";
 import logo from "../../assets/FullLogo.png";
-
+import { Grid } from "@mui/material";
 import index from "../../index.css";
 import { Button } from "@mui/material";
 import Connect from "./Connect"; 
