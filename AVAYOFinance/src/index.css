@@ -43,3 +43,31 @@ code {
   background-color: rgba(0, 0, 0, 0.2);
   border-radius: 4px;
 }
+.hover-underline-animation {
+  display: inline-block;
+  position: relative;
+  color: #ffffff;
+  margin-right: 50px;
+  margin-left: 20px;
+}
+
+.hover-underline-animation:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #2CCBFF;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.hover-underline-animation:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+.p1 {
+  margin-left: 20px;
+}
