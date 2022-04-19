@@ -24,6 +24,13 @@ export default function Header() {
       <Typography style={{color: "#2CCBFF"}} variant="h6" marginTop={-3}>
       AVAYOFinance - Sustainable mining solution
       </Typography>
+      <a href="https://github.com/AvayoFinance/WHITEPAPER_V1" target="__blank">
+        <p class="hover-underline-animation" >Whitepaper</p>
+      </a>
+      
+      <a href="https://hazecrypto.net/audit/avayofinance" target="__blank">
+        <p1  class="hover-underline-animation"   >Audit</p1>
+      </a>
     </Wrapper>
   );
 }
